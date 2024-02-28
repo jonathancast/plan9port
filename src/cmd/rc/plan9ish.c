@@ -204,13 +204,13 @@ int Waitfor(int pid, int unused0){
 	while((w = wait()) != nil){
 		delwaitpid(w->pid);
 		if(w->pid==pid){
-			if(strncmp(w->msg, "signal: ", 8) == 0)
+			if(strncmp(w->msg, "signal: ", 8) == 0 && !strstr(w->msg, "closed pipe"))
 				fprint(mapfd(2), "%d: %s\n", w->pid, w->msg);
 			setstatus(w->msg);
 			free(w);
 			return 0;
 		}
-		if(runq->iflag && strncmp(w->msg, "signal: ", 8) == 0)
+		if(runq->iflag && strncmp(w->msg, "signal: ", 8) == 0 && !strstr(w->msg, "closed pipe"))
 			fprint(2, "%d: %s\n", w->pid, w->msg);
 		for(p=runq->ret;p;p=p->ret)
 			if(p->pid==w->pid){
