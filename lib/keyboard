@@ -560,6 +560,8 @@
 2329  </          〈 left angle bracket
 232a  />          〉 right angle bracket
 2423              ␣	open box, visible space
+2605  bs          ★ black star
+2606  ws          ☆ white star
 2639  :(          ☹ sad face
 263A  :)          ☺ smiley face
 2654  wk          ♔	white chess king
