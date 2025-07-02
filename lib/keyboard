@@ -557,8 +557,6 @@
 2309  rc          ⌉ right ceiling
 230A  lf          ⌊ left floor
 230B  rf          ⌋ right floor
-2329  </          〈 left angle bracket
-232a  />          〉 right angle bracket
 2423              ␣	open box, visible space
 2605  bs          ★ black star
 2606  ws          ☆ white star
@@ -581,8 +579,10 @@
 266d  Mb          ♭	music flat
 266e  M#          ♮	music natural
 266f  Ms          ♯	music sharp
-300a  <+          《	left double angle bracket
-300b  +>          》	right double angle bracket
+27E8  </          ⟨ left angle bracket
+27e9  />          ⟩ right angle bracket
+27ea  <+          ⟪	left double angle bracket
+27eb  +>          ⟫	right double angle bracket
 F015  ZA          	raw alt (plan 9 specific)
 F016  ZS          	raw shift (plan 9 specific)
 F017  ZC          	raw ctl (plan 9 specific)
