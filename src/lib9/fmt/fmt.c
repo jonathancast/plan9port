@@ -21,6 +21,9 @@
 #define ATOMIC_VAR_INIT(x) (x)
 #else
 #include <stdatomic.h>
+#if __STDC_VERSION__ >= 202311L
+#define ATOMIC_VAR_INIT(x) (x)
+#endif
 #endif
 
 #include "plan9.h"
