@@ -332,11 +332,11 @@ match(char *s)
 	cs = string;
 	while(*cs++ == *s)
 		if(*s++ == '\0')
-			goto true;
+			goto success;
 	if(*s != '\0')
 		return 0;
 
-true:
+success:
 	cs--;
 	string = cs;
 	return 1;
